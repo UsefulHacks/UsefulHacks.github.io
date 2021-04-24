@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Derived From: -->
+<!-- https://github.com/EliasHasle/EliasHasle.github.io/blob/master/ghost_webcam.html -->
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="./styles/main.css">
+  <!-- <script type="module" src="js/buffer-geometry.js"></script> -->
+  <!-- <script type="module" src="js/smpte.js"></script> -->
+  <!-- <script type="module" src="js/aura-geometry.js"></script> -->
+  <script type="module" src="js/aura.min.js"></script>
+  <title>Aura simulation with Three.js</title>
+
+</head>
+
+<body>
+  <button id="videoMuteBtn" type="button">Close eyes</button>
+  <button id="pauseBtn" type="button">Pause</button>
+  <div id="timecodeDiv"></div>
+  <canvas id="webGLCanvas"></canvas>
+  <div id="videoBgWrapper" class="videoBgWrapper">
+    <video muted autoplay playsinline id="videoBg" class="videoBg">
+    </video>
+  </div>
+</body>
+
+</html>
