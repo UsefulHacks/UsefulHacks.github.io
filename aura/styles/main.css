@@ -13,21 +13,28 @@ html, body {
   background:transparent;
 }
 
+.button {
+  padding: 4px 6px;
+  text-align: center;
+  font-size: 16px;
+}
 #videoMuteBtn {
   position: fixed;
   z-index: 200;
+  top: 5px;
 }
 #pauseBtn {
   /* position: absolute; */
   position: fixed;
   z-index: 200;
-  top: 20px;
+  top: 35px;
 }
 #timecodeDiv {
   /* position: absolute; */
   position: fixed;
   z-index: 200;
-  top: 40px;
+  top: 65px;
+  font-size: 18px;
   color: white;
   text-shadow: 1px 1px black;
   font-family: Arial, Helvetica, sans-serif;
@@ -61,7 +68,7 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);        
-
+background-color: black;
 }
 
 @media (min-aspect-ratio: 16/9) {
