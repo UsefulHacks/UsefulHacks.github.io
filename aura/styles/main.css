@@ -15,25 +15,52 @@ html, body {
 
 .button {
   padding: 4px 6px;
-  text-align: center;
+  /* text-align: center; */
   font-size: 16px;
+  width: 200px;
 }
-#videoMuteBtn {
+.controlPanel {
   position: fixed;
   z-index: 200;
+}
+.controlPanelButton {
+  position: fixed;
+  z-index: 190;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  background:transparent;
+}
+#videoSource {
+  /* position: relative; */
+  padding: 4px 6px;
   top: 5px;
 }
-#pauseBtn {
-  /* position: absolute; */
-  position: fixed;
+#videoMuteBtn {
+  /* position: fixed; */
+  display: block;
   z-index: 200;
-  top: 35px;
+  /* top: 5px; */
+  /* width: 200px; */
+}
+#pauseBtn {
+  /* position: fixed; */
+  display: block;
+  z-index: 200;
+  /* top: 35px; */
+}
+.timecode {
+  position: fixed;
+  top: 12px;
+  left: 45px;
+  color: lightgrey;
+  text-shadow: 1px 1px black;
 }
 #timecodeDiv {
-  /* position: absolute; */
-  position: fixed;
+  /* position: fixed; */
   z-index: 200;
-  top: 65px;
+  /* top: 65px; */
   font-size: 18px;
   color: white;
   text-shadow: 1px 1px black;

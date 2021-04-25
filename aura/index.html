@@ -1,30 +1,54 @@
-<!doctype html>
-<!-- Derived From: -->
-<!-- https://github.com/EliasHasle/EliasHasle.github.io/blob/master/ghost_webcam.html -->
-
+<!DOCTYPE html>
 <html>
 
 <head>
+  <title>Migraine Aura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
   <link rel="stylesheet" href="./styles/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- <script type="module" src="js/buffer-geometry.js"></script> -->
-  <!-- <script type="module" src="js/smpte.js"></script> -->
+  <!-- aura dev script: other modules imported into main js module -->
   <!-- <script type="module" src="js/aura-geometry.js"></script> -->
-  <!-- aura production script -->
+  <!-- aura production script: single minified file in build folder -->
   <script type="module" src="js/aura.min.js"></script>
-  <title>Aura simulation with Three.js</title>
-
 </head>
 
 <body>
-  <button id="videoMuteBtn" type="button" class="button">Close eyes</button>
-  <button id="pauseBtn" type="button" class="button">Pause</button>
-  <div id="timecodeDiv" class="timecode"></div>
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right w3-theme-d5 controlPanel" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large w3-theme-d5">Close &times;</button>
+    <button id="videoMuteBtn" type="button" class="button w3-theme-d5">Close eyes</button>
+    <button id="pauseBtn" type="button" class="button w3-theme-d5">Pause</button>
+    <br />
+    <div class="select w3-theme-d5">
+      <label for="videoSource">Video device: </label><select id="videoSource"></select>
+    </div>
+  </div>
+  <!-- <button class="controlPanelButton w3-button w3-xlarge w3-teal" onclick="w3_open()">☰</button> -->
+  <button class="controlPanelButton w3-xxlarge" onclick="w3_open()">&#9776</button>
+  <div class="timecode">
+    Elapsed Time: <span id="timecodeDiv"></span>
+  </div>
+
+  <!-- Page Content -->
   <canvas id="webGLCanvas"></canvas>
   <div id="videoBgWrapper" class="videoBgWrapper">
     <video muted autoplay playsinline id="videoBg" class="videoBg">
     </video>
   </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
 </body>
 
 </html>
