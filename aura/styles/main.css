@@ -13,6 +13,9 @@ html, body {
   background:transparent;
 }
 
+
+/* side menu */
+
 .button {
   padding: 4px 6px;
   /* text-align: center; */
@@ -50,6 +53,16 @@ html, body {
   z-index: 200;
   /* top: 35px; */
 }
+
+.topbar {
+  position: fixed;
+  z-index: 190;
+  top: 8px;
+  left: 20px;
+  color: lightgrey;
+  text-shadow: 1px 1px black;
+}
+
 .timecode {
   position: fixed;
   top: 12px;

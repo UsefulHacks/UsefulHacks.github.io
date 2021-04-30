@@ -6,16 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/sidebar.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" /> -->
+
+  <script src="https://kit.fontawesome.com/bbd6793f93.js" crossorigin="anonymous"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js" integrity="sha512-KCwrxBJebca0PPOaHELfqGtqkUlFUCuqCnmtydvBSTnJrBirJ55hRG5xcP4R9Rdx9Fz9IF3Yw6Rx40uhuAHR8Q==" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <!-- dev: build script changes this to aura.min.js for production -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   <script type="module" src="js/aura.min.js"></script>
 </head>
 
 <body>
-  <!-- Sidebar -->
-  <div class="w3-sidebar w3-bar-block w3-border-right w3-theme-d5 controlPanel" style="display:none" id="mySidebar">
+  <!--Side menu -->
+  <!-- <div class="w3-sidebar w3-bar-block w3-border-right w3-theme-d5 controlPanel" style="display:none" id="mySidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-large w3-theme-d5">Close &times;</button>
     <button id="videoMuteBtn" type="button" class="button w3-theme-d5">Close eyes</button>
     <button id="pauseBtn" type="button" class="button w3-theme-d5">Pause</button>
@@ -24,12 +30,29 @@
     <div class="select w3-theme-d5">
       <label for="videoSource">Video device: </label><select id="videoSource"></select>
     </div>
-  </div>
-  <!-- <button class="controlPanelButton w3-button w3-xlarge w3-teal" onclick="w3_open()">☰</button> -->
-  <button class="controlPanelButton w3-xxlarge" onclick="w3_open()">&#9776</button>
-  <div class="timecode">
+  </div> -->
+
+<!-- Sidebar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" id="sidenavCloseBtn" class="closebtn">&times;</a>
+  <a href="#" id="videoMuteBtn"><i class="fas fa-eye-slash"></i></a>
+  <a href="#" id="pauseBtn"><i class="fas fa-pause"></i></a>
+  <a href="#" id="fullscreenBtn"><i class="fas fa-expand"></i></a>
+  <a href="#" id="videoSelectBtn"><i class="fas fa-video"></i></a>
+  <select id="videoSelect"></select>
+</div>
+
+<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span> -->
+  <!-- <button class="controlPanelButton w3-xxlarge" onclick="w3_open()">&#9776</button> -->
+<!-- <span class = "sidenavOpenBtn" onclick="openNav()">&#9776; </span> -->
+
+  <!-- <div class="timecode">
     Elapsed Time (hh:mm:ss): <span id="timecodeDiv"></span>
-  </div>
+  </div> -->
+<div class="topbar">
+<span id="sidenavOpenBtn" class="sidenavOpenBtn">&#9776; </span>
+<span>Elapsed Time (hh:mm:ss): </span><span id="timecodeDiv"></span>
+</div>
 
   <!-- Page Content -->
   <canvas id="webGLCanvas"></canvas>
@@ -47,6 +70,8 @@
       document.getElementById("mySidebar").style.display = "none";
     }
   </script>
+
+<!-- <script src="js/sidebar.js"></script> -->
 
 </body>
 
