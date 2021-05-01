@@ -55,7 +55,19 @@
   display: none;
 }
 
-@media screen and (max-height: 450px) {
+/* removed to fix for close button overlapping in landscape mode on mobile */
+/* @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+} */
+
+/*
+@media all and (orientation: landscape) {
+  .sidenav .closebtn {
+    position: static;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 0px;
+  }
+} */
